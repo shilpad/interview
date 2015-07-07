@@ -1,0 +1,262 @@
+package com.example.uibasics;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+/*
+ * Table: profile
+ * Columns: _id integer primary key autoincrement
+ *          name string not null
+ * 			date integer not null
+ * 			month integer not null
+ * 			year integer not null
+ *  	    gender character 
+ * 			image blob
+ * */
+public class MilestonesDbAdapter {
+	// profile table
+	public static final String KEY_NAME = "name";
+    public static final String KEY_BIRTHDATE = "date";
+    public static final String KEY_BIRTHMONTH = "month";
+    public static final String KEY_BIRTHYEAR = "year";
+    public static final String KEY_GENDER = "gender";
+    public static final String KEY_PICTURE = "picture";
+    
+    //information table
+    public static final String KEY_PROFILEID = "profile_id";
+    public static final String KEY_CAPTION = "caption";
+    public static final String KEY_NOTES ="notes";
+    public static final String KEY_MEDIAPATH = "mediapath";
+    
+    //tags table
+    public static final String KEY_INFORMATIONID= "information_id";
+    public static final String KEY_TAGNAME = "tag_name";
+    public static final String KEY_DATE= "date";
+    
+    private static final String TAG = "MilestonesDbAdapter";
+    private DatabaseHelper mDbHelper;
+    private SQLiteDatabase mDb;
+    
+    /**
+     * Database creation sql statement
+     */
+/*   private static final String DATABASE_CREATE =
+    		"create table profile (_id integer primary key autoincrement, "
+        + "name text not null, date integer not null, month integer not null, year integer not null,
+         gender text null, picture BLOB);";*/
+ 
+    private static final String CREATE_TABLE_PROFILE =
+    		"create table profile (profile_id integer primary key autoincrement, "
+        + "name text not null, date integer not null, month integer not null, year integer not null," +
+        " gender text null, picture text not null);";
+  
+    
+    private static final String CREATE_TABLE_INFORMATION =
+    		"create table information (information_id integer primary key autoincrement, "
+        + "profile_id integer not null, caption text not null, notes text null, mediapath text null);";
+
+    // tag_name could be the date too ! i.e actual date or 1st bday, 2nd bday etc
+    private static final String CREATE_TABLE_TAGS =
+    		"create table tags (tag_id integer primary key autoincrement, "
+        + "profile_id integer not null, information_id integer not null, tag_name text not null);";
+    
+    private static final String DATABASE_NAME = "milestones";
+    private static final String DATABASE_TABLE_PROFILE = "profile";
+    private static final String DATABASE_TABLE_INFORMATION = "information";
+    private static final String DATABASE_TABLE_TAGS = "tags";
+    
+    private static final int DATABASE_VERSION = 2;
+
+    private Context mCtx = null; 
+
+    private static class DatabaseHelper extends SQLiteOpenHelper {
+
+    	
+        DatabaseHelper(Context context) {
+            super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL(CREATE_TABLE_PROFILE);
+            db.execSQL(CREATE_TABLE_INFORMATION);
+            db.execSQL(CREATE_TABLE_TAGS);
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
+                    + newVersion + ", which will destroy all old data");
+            db.execSQL("DROP TABLE IF EXISTS profile");
+            onCreate(db);
+        }
+    }
+    
+    /**
+	 * Constructor - takes the context to allow the database to be
+	 * opened/created
+	 * 
+	 * @param ctx the Context within which to work
+	 */
+	public MilestonesDbAdapter(Context ctx) {
+	    this.mCtx = ctx;
+	}
+	
+    /**
+     * Open the notes database. If it cannot be opened, try to create a new
+     * instance of the database. If it cannot be created, throw an exception to
+     * signal the failure
+     * 
+     * @return this (self reference, allowing this to be chained in an
+     *         initialization call)
+     * @throws SQLException if the database could be neither opened or created
+     */
+    public MilestonesDbAdapter open() throws SQLException {
+        mDbHelper = new DatabaseHelper(mCtx);
+        mDb = mDbHelper.getWritableDatabase();
+        return this;
+    }
+
+    public void close() {
+        mDbHelper.close();
+    }
+    
+    /**
+     * Create a new entry profile using the details provided. If the profile is
+     * successfully created return the new rowId for that note, otherwise return
+     * a -1 to indicate failure.
+     * 
+     * @param name of the person
+     * @param date, month and year
+     * @param gender
+     * @param picturePath
+     * @return rowId or -1 if failed
+     */
+    public long createProfile (String name, Integer date, Integer month, Integer year,
+    		String gender, String picturePath) {
+    	    
+    	//mDb.execSQL ("drop table profile");
+    	//mDb.execSQL(DATABASE_CREATE);
+    	
+    	ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_NAME, name);
+        initialValues.put(KEY_BIRTHDATE, date);
+        initialValues.put(KEY_BIRTHMONTH, month);
+        initialValues.put(KEY_BIRTHYEAR, year);
+        initialValues.put (KEY_GENDER, gender);
+        initialValues.put (KEY_PICTURE, picturePath);
+        
+        long retVal = 0;
+        retVal =  mDb.insert(DATABASE_TABLE_PROFILE, null, initialValues); 
+        return retVal;
+        
+       /* try
+        {
+        	 byte[] byteImage1 = null;
+        	 FileInputStream instream = new FileInputStream(picturePath); 
+        	 BufferedInputStream bif = new BufferedInputStream(instream); 
+        	 byteImage1 = new byte[bif.available()]; 
+        	 bif.read(byteImage1); 
+        	 initialValues.put(KEY_PICTURE, byteImage1);
+
+        	 retVal =  mDb.insert(DATABASE_TABLE, null, initialValues); 
+        	 if(retVal < 0) 
+        	 {
+             	Log.wtf(TAG, "\r\n!!! Error adding blob field!!!\r\n" + " while adding name " + name + " date "
+                     + date);
+        	 }
+             	
+        } catch (IOException e) 
+        {
+            Log.wtf(TAG, "\r\n!!! Error: " + e+"!!!\r\n" + " while adding name " + name + " date "
+                    + date);
+        }
+        
+       return retVal;*/
+    }
+
+    /**
+     * Return a Cursor over the list of all profiles in the database
+     * 
+     * @return Cursor over all profiles
+     */
+    public Cursor fetchAllProfiles() {
+
+         return mDb.query(DATABASE_TABLE_PROFILE, null, null, null, null, null, null);
+        
+    }
+    
+    // Information table
+    /**
+     * Create a new entry profile using the details provided. If the profile is
+     * successfully created return the new rowId for that note, otherwise return
+     * a -1 to indicate failure.
+     * 
+     * @param name of the person
+     * @param date, month and year
+     * @param gender
+     * @param picturePath
+     * @return rowId or -1 if failed
+     */
+    public long createInformation (Integer profileId, String caption, String notes,
+    		 String mediaPath) {
+    	    
+    	//mDb.execSQL ("drop table profile");
+    	//mDb.execSQL(DATABASE_CREATE);
+    	
+    	ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_PROFILEID, profileId);
+        initialValues.put(KEY_CAPTION, caption);
+        initialValues.put(KEY_NOTES, notes);
+        initialValues.put(KEY_MEDIAPATH, mediaPath);
+        
+        long retVal = 0;
+        retVal =  mDb.insert(DATABASE_TABLE_PROFILE, null, initialValues); 
+        
+        if (retVal != -1)
+        {
+        	initialValues.clear();
+        	int information_id = (int) retVal;
+        	//continue adding to tags table
+
+            initialValues.put(KEY_PROFILEID, profileId);
+            initialValues.put(KEY_INFORMATIONID, information_id);
+            initialValues.put(KEY_TAGNAME, caption);
+        }
+        return retVal;
+        
+       /* try
+        {
+        	 byte[] byteImage1 = null;
+        	 FileInputStream instream = new FileInputStream(picturePath); 
+        	 BufferedInputStream bif = new BufferedInputStream(instream); 
+        	 byteImage1 = new byte[bif.available()]; 
+        	 bif.read(byteImage1); 
+        	 initialValues.put(KEY_PICTURE, byteImage1);
+
+        	 retVal =  mDb.insert(DATABASE_TABLE, null, initialValues); 
+        	 if(retVal < 0) 
+        	 {
+             	Log.wtf(TAG, "\r\n!!! Error adding blob field!!!\r\n" + " while adding name " + name + " date "
+                     + date);
+        	 }
+             	
+        } catch (IOException e) 
+        {
+            Log.wtf(TAG, "\r\n!!! Error: " + e+"!!!\r\n" + " while adding name " + name + " date "
+                    + date);
+        }
+        
+       return retVal;*/
+    }
+}
+    

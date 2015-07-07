@@ -1,0 +1,171 @@
+package com.example.uibasics;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+/*
+ * Table: profile
+ * Columns: _id integer primary key autoincrement
+ *          name string not null
+ * 			date integer not null
+ * 			month integer not null
+ * 			year integer not null
+ *  	    gender character 
+ * 			image blob
+ * */
+public class MilestonesDbAdapter {
+	public static final String KEY_NAME = "name";
+    public static final String KEY_DATE = "date";
+    public static final String KEY_MONTH = "month";
+    public static final String KEY_YEAR = "year";
+    public static final String KEY_GENDER = "gender";
+    public static final String KEY_PICTURE = "picture";
+    
+    private static final String TAG = "MilestonesDbAdapter";
+    private DatabaseHelper mDbHelper;
+    private SQLiteDatabase mDb;
+    
+    /**
+     * Database creation sql statement
+     */
+/*   private static final String DATABASE_CREATE =
+    		"create table profile (_id integer primary key autoincrement, "
+        + "name text not null, date integer not null, month integer not null, year integer not null,
+         gender text null, picture BLOB);";*/
+ 
+    private static final String CREATE_TABLE_PROFILE =
+    		"create table profile (_id integer primary key autoincrement, "
+        + "name text not null, date integer not null, month integer not null, year integer not null," +
+        " gender text null, picture text not null);";
+    
+    private static final String DATABASE_NAME = "milestones";
+    private static final String DATABASE_TABLE = "profile";
+    private static final int DATABASE_VERSION = 2;
+
+    private Context mCtx = null; 
+
+    private static class DatabaseHelper extends SQLiteOpenHelper {
+
+    	
+        DatabaseHelper(Context context) {
+            super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL(DATABASE_CREATE);
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
+                    + newVersion + ", which will destroy all old data");
+            db.execSQL("DROP TABLE IF EXISTS profile");
+            onCreate(db);
+        }
+    }
+    
+    /**
+	 * Constructor - takes the context to allow the database to be
+	 * opened/created
+	 * 
+	 * @param ctx the Context within which to work
+	 */
+	public MilestonesDbAdapter(Context ctx) {
+	    this.mCtx = ctx;
+	}
+	
+    /**
+     * Open the notes database. If it cannot be opened, try to create a new
+     * instance of the database. If it cannot be created, throw an exception to
+     * signal the failure
+     * 
+     * @return this (self reference, allowing this to be chained in an
+     *         initialization call)
+     * @throws SQLException if the database could be neither opened or created
+     */
+    public MilestonesDbAdapter open() throws SQLException {
+        mDbHelper = new DatabaseHelper(mCtx);
+        mDb = mDbHelper.getWritableDatabase();
+        return this;
+    }
+
+    public void close() {
+        mDbHelper.close();
+    }
+    
+    /**
+     * Create a new entry note using the details provided. If the profile is
+     * successfully created return the new rowId for that note, otherwise return
+     * a -1 to indicate failure.
+     * 
+     * @param name of the person
+     * @param date, month and year
+     * @param gender
+     * @param picturePath
+     * @return rowId or -1 if failed
+     */
+    public long createProfile (String name, Integer date, Integer month, Integer year,
+    		String gender, String picturePath) {
+    	    
+    	//mDb.execSQL ("drop table profile");
+    	//mDb.execSQL(DATABASE_CREATE);
+    	
+    	ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_NAME, name);
+        initialValues.put(KEY_DATE, date);
+        initialValues.put(KEY_MONTH, month);
+        initialValues.put(KEY_YEAR, year);
+        initialValues.put (KEY_GENDER, gender);
+        initialValues.put (KEY_PICTURE, picturePath);
+        
+        long retVal = 0;
+        retVal =  mDb.insert(DATABASE_TABLE, null, initialValues); 
+        return retVal;
+        
+       /* try
+        {
+        	 byte[] byteImage1 = null;
+        	 FileInputStream instream = new FileInputStream(picturePath); 
+        	 BufferedInputStream bif = new BufferedInputStream(instream); 
+        	 byteImage1 = new byte[bif.available()]; 
+        	 bif.read(byteImage1); 
+        	 initialValues.put(KEY_PICTURE, byteImage1);
+
+        	 retVal =  mDb.insert(DATABASE_TABLE, null, initialValues); 
+        	 if(retVal < 0) 
+        	 {
+             	Log.wtf(TAG, "\r\n!!! Error adding blob field!!!\r\n" + " while adding name " + name + " date "
+                     + date);
+        	 }
+             	
+        } catch (IOException e) 
+        {
+            Log.wtf(TAG, "\r\n!!! Error: " + e+"!!!\r\n" + " while adding name " + name + " date "
+                    + date);
+        }
+        
+       return retVal;*/
+    }
+
+    /**
+     * Return a Cursor over the list of all profiles in the database
+     * 
+     * @return Cursor over all profiles
+     */
+    public Cursor fetchAllProfiles() {
+
+         return mDb.query(DATABASE_TABLE, null, null, null, null, null, null);
+        
+    }
+}
+    

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1345945763723_1" label="MyReminder" name="MyReminder">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sumOfPairsOfElements" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paintFillUsingBFS" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sample1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/constantTimeMin" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/singleLinkedList" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/suffixTree" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/stringPermutations" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/pascalTriangle" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/phoneNumberToLetterWords" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/firstNonRepeatedChar" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/findMissingNumsInARange" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/largestCommonSubArray" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/findDuplicateInSortedArray" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/subsetsOfASet" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sortStrings" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/quickSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/endianNess" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/elementsThatAddToASum" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/fibonacci" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/findkLargestElements" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/fixSentence" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/transformWord" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/knapSackProblem" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/radixSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/gameOfLife" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/myString" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hashTable" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/diagonalMatrixTraversal" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/numberOccuringOddTimes" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/generateRandomGraph" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/intersectionPointOfLinkedLists" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/itoa" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/longestCommonPrefix" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/trees" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/removeDuplicateChars" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/strstr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/maxSumOfSubVector" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/QUsingStack" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/countingSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/bucketSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/polymorphism" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2sInARange" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nextPrimeNumber" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/shuffle" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mergeSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/binarySearch" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/boggle" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/3NumbersThatSumTo0" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/powOf2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/counSetBits" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/matrixMultiplication" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cdCommand" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/caseCombinations" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/longestPalindrome" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/towersOfHanoi" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/rotateImage" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/multiplyUnusualWay" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/groupAnagrams" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/camelCaseConversion" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/stringManipulation" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408997808998_2" label="Ooyala" name="Ooyala">
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/ooyala" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/abcd" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408997881886_4" label="InterviewPrep" name="InterviewPrep">
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/sumOfPairsOfElements" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/pathsToXAndY" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/sample1" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/paintFillUsingBFS" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/constantTimeMin" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/singleLinkedList" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/combinationOfPairOfParantheses" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/suffixTree" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/stringPermutations" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/pascalTriangle" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/phoneNumberToLetterWords" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/largestCommonSubArray" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/firstNonRepeatedChar" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/findMissingNumsInARange" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/findDuplicateInSortedArray" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/subsetsOfASet" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/sortStrings" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/endianNess" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/quickSort" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/elementsThatAddToASum" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/fibonacci" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/findkLargestElements" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/fixSentence" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/firstCpp" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/tryOut" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/yelp_CodeTest" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/transformWord" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/knapSackProblem" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/radixSort" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/gameOfLife" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/myString" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/setRowColumn2Zero" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/hashTable" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/diagonalMatrixTraversal" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/numberOccuringOddTimes" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/generateRandomGraph" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/intersectionPointOfLinkedLists" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/itoa" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/longestCommonPrefix" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/trees" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/removeDuplicateChars" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/strstr" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/maxSumOfSubVector" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/QUsingStack" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/countingSort" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/bucketSort" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/paintFillUsingDFS" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/polymorphism" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/2sInARange" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/nextPrimeNumber" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/shuffle" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/mergeSort" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/binarySearch" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/boggle" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/3NumbersThatSumTo0" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/powOf2" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/designPatterns" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/counSetBits" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/matrixMultiplication" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/cdCommand" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/caseCombinations" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/longestPalindrome" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/towersOfHanoi" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/multiplyUnusualWay" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/rotateImage" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/groupAnagrams" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/makeChange" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/camelCaseConversion" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/stringManipulation" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1319430732264_1" label="Window Working Set" name="Aggregate for window 1319430732264"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1427865658939_5" label="Multiple Working Sets" name="Aggregate:InterviewPrep:MyReminder:Ooyala:">
+<workingSet IMemento.internal.id="InterviewPrep"/>
+<workingSet IMemento.internal.id="MyReminder"/>
+<workingSet IMemento.internal.id="Ooyala"/>
+</workingSet>
+<mruList name="MyReminder"/>
+<mruList name="InterviewPrep"/>
+<mruList name="Ooyala"/>
+</workingSetManager>

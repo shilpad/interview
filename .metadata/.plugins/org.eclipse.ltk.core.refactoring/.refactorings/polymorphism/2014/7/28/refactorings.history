@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;polymorphism/main.cpp&apos; to &apos;main1.cpp&apos;" description="Rename resource &apos;main.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.cpp" name="main1.cpp" stamp="1405207572602" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;polymorphism/poly_eg1.cpp&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;poly_eg1.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="poly_eg1.cpp" name="main.cpp" stamp="1405207585053" updateReferences="true"/>
+</session>

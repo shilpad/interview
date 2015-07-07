@@ -1,0 +1,29 @@
+
+**** Build of configuration Debug for project 3NumbersThatSumTo0 ****
+
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+../main.cpp:51:21: warning: sizeof on array function parameter will return size of 'int *' instead of 'int []' [-Wsizeof-array-argument]
+        qsort (arr, sizeof (arr)/sizeof(arr[0]), sizeof(arr), comp);
+                           ^
+../main.cpp:49:34: note: declared here
+void allSumZeroCombinations (int arr[], int size)
+                                 ^
+../main.cpp:51:49: warning: sizeof on array function parameter will return size of 'int *' instead of 'int []' [-Wsizeof-array-argument]
+        qsort (arr, sizeof (arr)/sizeof(arr[0]), sizeof(arr), comp);
+                                                       ^
+../main.cpp:49:34: note: declared here
+void allSumZeroCombinations (int arr[], int size)
+                                 ^
+2 warnings generated.
+Finished building: ../main.cpp
+ 
+Building target: 3NumbersThatSumTo0
+Invoking: MacOS X C++ Linker
+g++  -o "3NumbersThatSumTo0"  ./main.o   
+Finished building target: 3NumbersThatSumTo0
+ 
+
+**** Build Finished ****

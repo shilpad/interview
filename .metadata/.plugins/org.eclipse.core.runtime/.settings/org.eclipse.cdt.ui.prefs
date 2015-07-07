@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+editor_folding_default_headers=false
+editor_folding_default_inactive=false
+editor_folding_default_macros=false
+editor_folding_default_structures=false
+editor_folding_enabled=true
+editor_folding_preprocessor_enabled=true
+editor_folding_statements=true
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
+wizard.preferred.toolchains=cdt.managedbuild.toolchain.gnu.macosx.exe.debug

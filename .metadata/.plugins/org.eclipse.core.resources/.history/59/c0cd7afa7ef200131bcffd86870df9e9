@@ -1,0 +1,62 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Jul 12, 2014
+ *      Author: rudolpharaujo
+ */
+
+using namespace std;
+
+#include <iostream>
+
+class polygon
+{
+	protected:
+		int x;
+		int y;
+
+	public:
+		void set_values (int x, int y)
+		{
+			this->x = x; this->y = y;
+		}
+
+		int get_x ()   { return x;}
+		int get_y () { return y;}
+
+};
+
+class rectangle: public polygon
+{
+	public:
+		int area ()
+		{
+			return (x * y);
+		}
+
+};
+
+class triangle: public polygon
+{
+	public:
+		int area ()
+		{
+			return (1/2 * x * y);
+		}
+};
+
+int main ()
+{
+	polygon objPolygon;
+	objPolygon.set_values(10,5);
+
+	cout << "Co-ordinates: "objPolygon.get_x() << " " << objPolygon.get_y() << endl;
+
+	rectangle objRectangle;
+	cout << "Area of rectangle = " << objRectangle.area () << endl;
+
+	triangle objTriangle;
+	cout << "Area of triangle = " << objTriangle.area () << endl;
+
+	return 0;
+}

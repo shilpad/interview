@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MyHorizontalLayout.java&apos; to &apos;UIBasics/src/com.example.uibasics&apos;&#x0A;- Original project: &apos;HorizontalScrollView&apos;&#x0A;- Destination element: &apos;UIBasics/src/com.example.uibasics&apos;&#x0A;- Original element: &apos;com.example.androidhorizontalscrollviewgallery.MyHorizontalLayout.java&apos;" description="Copy compilation unit" destination="=UIBasics/src&lt;com.example.uibasics" element1="/src&lt;com.example.androidhorizontalscrollviewgallery{MyHorizontalLayout.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1360565848893" units="1" version="1.0"/>
+</session>

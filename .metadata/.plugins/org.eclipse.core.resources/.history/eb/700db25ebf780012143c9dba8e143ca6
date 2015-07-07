@@ -1,0 +1,7 @@
+package com.example.uibasics;
+
+import android.widget.AdapterView.OnItemSelectedListener;
+
+public class CustomOnItemSelectedListener  implements OnItemSelectedListener{
+
+}

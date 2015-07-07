@@ -1,0 +1,5 @@
+package com.example.uibasics;
+
+public class CustomOnItemSelectedListener {
+
+}

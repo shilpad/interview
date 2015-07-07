@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;layout&apos;&#x0A;- Original project: &apos;TutorialExpandListView&apos;&#x0A;- Destination element: &apos;layout&apos;&#x0A;- Original elements:&#x0A;     expandlist_group_item.xml&#x0A;     expandlist_child_item.xml" description="Copy files" element1="res/layout/expandlist_group_item.xml" element2="res/layout/expandlist_child_item.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1363481641670" target="/UIBasics/res/layout" units="0" version="1.0"/>
+</session>

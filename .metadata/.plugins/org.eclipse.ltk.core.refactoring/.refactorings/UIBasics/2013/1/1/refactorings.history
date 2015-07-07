@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change Layout" description="Change Layout" file="/UIBasics/res/layout/relative.xml" flags="6" flatten="true" id="com.android.ide.eclipse.adt.refactoring.convert" proj="/UIBasics" sel-end="251" sel-start="39" stamp="1357368904515" type="android.widget.RelativeLayout"/>
+</session>

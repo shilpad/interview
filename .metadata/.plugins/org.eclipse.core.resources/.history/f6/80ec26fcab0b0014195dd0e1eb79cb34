@@ -1,0 +1,42 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Jul 14, 2014
+ *      Author: rudolpharaujo
+ */
+
+
+char* strstr (char* source, char* substring)
+{
+	// First find the starting pos of the substring in source
+	// Then match all the chars.
+
+	char *ptrTmp = source;
+	int index = 0;
+	char* ptrStartPos = null;
+	while (ptrTmp)
+	{
+		if (ptrTmp[index] == substring [index])
+		{
+
+			if (substring)
+			{
+				//match the rest
+				substring++;
+			}
+		}
+		else
+		{
+			// if entire substring matched
+		}
+
+		++ptrTmp;
+	}
+}
+
+int main ()
+{
+	char strSource [] = "This is a simple string";
+
+	char *pstr = strstr (strSource, "simple");
+}
